@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.jenkins-ci.plugins</groupId>
+		<artifactId>plugin</artifactId>
+		<version>2.26-beta-1</version>
+		<relativePath />
+	</parent>
+	<groupId>net.bull.javamelody</groupId>
+	<artifactId>aws-s3-library</artifactId>
+	<packaging>hpi</packaging>
+	<version>1.11.136</version>
+	<name>AWS S3 Library</name>
+	<description>Provides dependencies needed for AWS S3</description>
+	<url>https://github.com/javamelody/aws-s3-library</url>
+
+	<developers>
+		<developer>
+			<id>evernat</id>
+			<email>evernat@free.fr</email>
+			<name>Emeric Vernat</name>
+		</developer>
+	</developers>
+	<licenses>
+		<license>
+			<name>MIT</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<dependencies>
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk-s3</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+
+	<scm>
+		<connection>scm:git:ssh://github.com/javamelody/aws-s3-library.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com/javamelody/aws-s3-library.git</developerConnection>
+		<url>https://github.com/javamelody/aws-s3-library</url>
+		<tag>HEAD</tag>
+	</scm>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.19.1</version>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>repo.jenkins-ci.org</id>
+			<url>http://repo.jenkins-ci.org/public/</url>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>repo.jenkins-ci.org</id>
+			<url>http://repo.jenkins-ci.org/public/</url>
+		</pluginRepository>
+	</pluginRepositories>
+</project>  
